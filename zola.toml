@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "https://test-gos-blog.github.io"
-title = "GrapheneOS Blog"
+title = "GrapheneOS Test Blog"
 description = "A test GOS blog."
 
 # Whether to automatically compile all Sass files in the sass directory
