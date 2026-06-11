@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8"/>
+        <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+        <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}"/>
+        <meta name="theme-color" content="#212121"/>
+        <meta name="color-scheme" content="dark light"/>
+        <meta name="msapplication-TileColor" content="#ffffff"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+        <meta name="twitter:site" content="@GrapheneOS"/>
+        <meta name="twitter:creator" content="@GrapheneOS"/>
+        <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}"/>
+        <meta property="og:description" content="{% block og_desc %}{{ config.description }}{% endblock og_desc %}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="/opengraph.png"/>
+        <meta property="og:image:width" content="512"/>
+        <meta property="og:image:height" content="512"/>
+        <meta property="og:image:alt" content="GrapheneOS logo"/>
+        <meta property="og:site_name" content="GrapheneOS"/>
+        <meta property="og:url" content="{{ current_url | safe }}"/>
+        <link rel="canonical" href="{{ config.extra.canonical_base_url ~ current_path }}"/>
+        <link rel="icon" href="/favicon.ico"/>
+        <link rel="icon" sizes="any" type="image/svg+xml" href="/favicon.svg"/>
+        <link rel="mask-icon" href="/mask-icon.svg" color="#1a1a1a"/>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+        <link rel="stylesheet" href="/main.css" integrity="sha364-{{ get_hash(path="static/main.css", sha_type=384, base64=true) }}"/>
+        <link rel="manifest" href="/manifest.webmanifest"/>
+        <link rel="license" href="/LICENSE.txt"/>
+        <link rel="me" href="https://grapheneos.social/@GrapheneOS"/>
+    </head>
+    <body>
+        {% include "header.html" %}
+        {% block content %}{% endblock content %}
+        {% include "footer.html" %}
+        {# include "context.html" #}
+    </body>
+</html>

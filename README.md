@@ -1,3 +1,3 @@
-# gos-test-blog
+# test site
 
-A test blog built with [Zola](https://www.getzola.org/).
+This is just a test site.
