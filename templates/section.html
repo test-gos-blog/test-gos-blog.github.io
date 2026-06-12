@@ -15,7 +15,7 @@
     <div>
         <h2>Recent articles:</h2>
         <ul>
-            {%- for page in paginator.pages -%}
+            {%- for page in section.pages -%}
                 <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
             {%- endfor -%}
         </ul>

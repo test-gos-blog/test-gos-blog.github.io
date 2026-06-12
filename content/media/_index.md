@@ -3,7 +3,6 @@ title = "GrapheneOS in the Media"
 description = "GrapheneOS often appears in the news or in other media. Posts in this section will include updates related to media."
 sort_by = "update_date"
 weight = 1
-paginate_by = 10
 generate_feeds = true
 +++
 
