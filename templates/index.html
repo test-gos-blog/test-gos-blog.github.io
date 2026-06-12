@@ -12,7 +12,7 @@
                     <h2><a href="{{ subsection.permalink }}">{{ subsection.title }}</a></h2>
                     <ul>
                         {%- for page in subsection.pages -%}
-                            <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+                            <li><a href="{{ page.permalink }}">{{ page.title }}</a> <em>({{ page.date | date }})</em></li>
                             {# Seems indexes start at 1 #}
                             {%- if loop.index == 5 %}{% break %}{% endif -%}
                         {%- endfor -%}
