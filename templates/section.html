@@ -1,6 +1,6 @@
 {%- extends "base.html" -%}
 
-{% block title %}{{ section.title }}{% endblock title %}
+{% block title %}{{ section.title }} - {{ super() }}{% endblock title %}
 
 {% block description %}{{ section.description }}{% endblock description %}
 
