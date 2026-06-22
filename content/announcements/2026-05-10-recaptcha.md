@@ -15,7 +15,7 @@ Apple's Privacy Pass brought hardware attestation to the web to help with passin
 
 Google's reCAPTCHA is planning an approach where they use Privacy Pass on Apple hardware, their own approach on Google Mobile Services Android devices and a QR code scanning system to require an iOS or Google certified Android device for Windows and other systems:
 
-https://support.google.com/recaptcha/answer/16609652
+[https://support.google.com/recaptcha/answer/16609652](https://support.google.com/recaptcha/answer/16609652)
 
 Banking and government services increasingly require using a mobile app where they can use attestation to force using an Apple or Google approved device and OS. Apple's privacy pass, Google's 'cancelled' Web Environment Integrity and now reCAPTCHA Mobile Verification are bringing this to the web.
 
@@ -41,6 +41,6 @@ Services shouldn't ban people from using arbitrary hardware and operating system
 
 Unified Attestation is another anti-competitive system being pushed by multiple European companies. It will similarly lock people out from using arbitrary hardware and software. That's not a solution and is far worse than Android's much more open hardware attestation API.
 
-https://grapheneos.social/@GrapheneOS/116239523775374959
+[https://grapheneos.social/@GrapheneOS/116239523775374959](https://grapheneos.social/@GrapheneOS/116239523775374959)
 
 Android's hardware attestation shouldn't be used to lock out users not using specific hardware or OSes. However, the fact that it permits arbitrary roots of trust and OSes at least allows services to permit more. Google could use it to permit GrapheneOS for Play Integrity if that was about security.
