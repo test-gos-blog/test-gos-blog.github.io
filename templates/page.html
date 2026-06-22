@@ -10,6 +10,7 @@
 
 {%- block content -%}
 <main>
+    {%- include "breadcrumbs.html" -%}
     <h1 id="page-title">{{ page.title }}</h1>
     <var>{{ page.date | date }}</var>
     {{ page.content | safe }}
