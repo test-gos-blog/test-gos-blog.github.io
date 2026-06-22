@@ -1,7 +1,7 @@
 +++
 title = "News"
 description = "GrapheneOS news and updates for our users."
-sort_by = "update_date"
+sort_by = "date"
 weight = 1
 generate_feeds = true
 +++
