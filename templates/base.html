@@ -18,8 +18,8 @@
         <meta property="og:image:height" content="512"/>
         <meta property="og:image:alt" content="GrapheneOS logo"/>
         <meta property="og:site_name" content="GrapheneOS"/>
-        <meta property="og:url" content="{{ current_url | safe }}"/>
-        <link rel="canonical" href="{{ config.extra.canonical_base_url ~ current_path }}"/>
+        {% block og_url %}<meta property="og:url" content="{{ current_url | safe }}"/>{% endblock og_url %}
+        {% block canonical_url %}<link rel="canonical" href="{{ config.extra.canonical_base_url ~ current_path }}"/>{% endblock canonical_url %}
         <link rel="icon" href="/favicon.ico"/>
         <link rel="icon" sizes="any" type="image/svg+xml" href="/favicon.svg"/>
         <link rel="mask-icon" href="/mask-icon.svg" color="#1a1a1a"/>
