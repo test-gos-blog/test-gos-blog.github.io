@@ -1,5 +1,5 @@
 +++
-title = "GrapheneOS Speach Services Release"
+title = "GrapheneOS Speech Services Release"
 description = "Initial release of GrapheneOS Speech Services for text-to-speech"
 +++
 
