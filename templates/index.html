@@ -4,7 +4,6 @@
 {%- set root_section = get_section( path="_index.md" ) -%}
 <main>
     {{ section.content | safe }}
-    <br>
     <div>
         {%- for p in root_section.subsections -%}
             {%- set subsection = get_section( path=p ) -%}
