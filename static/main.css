@@ -293,6 +293,20 @@ footer a, footer a:visited {
     border: none;
 }
 
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px 10px 0px;
+}
+
+.pagination a {
+  padding: 8px 16px;
+}
+
+.pagination-next {
+    margin-left: auto;
+}
+
 #stable-channel ul, #beta-channel ul {
     margin: 0;
     padding: 0;

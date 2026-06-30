@@ -6,6 +6,8 @@ description = "A test GOS blog."
 # Default author for posts (for atom feeds)
 author = "GrapheneOS Team"
 
+exclude_paginated_pages_in_sitemap = "all"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 

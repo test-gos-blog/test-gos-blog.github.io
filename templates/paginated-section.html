@@ -16,7 +16,7 @@
 
     <div>
         <ul>
-            {%- for page in section.pages -%}
+            {%- for page in paginator.pages -%}
                 <li><a href="{{ page.permalink }}">{{ page.title }}</a> <var>
                     {%- if page.updated -%}
                     (updated {{ page.updated | date }})
@@ -27,5 +27,15 @@
             {%- endfor -%}
         </ul>
     </div>
+    {% if paginator.previous or paginator.next %}
+    <nav class="pagination">
+        {% if paginator.previous %}
+            <a class="pagination-previous" href="{{ paginator.previous }}">‹ Previous</a>
+        {% endif %}
+        {% if paginator.next %}
+            <a class="pagination-next" href="{{ paginator.next }}">Next ›</a>
+        {% endif %}
+    </nav>
+    {% endif %}
 </main>
 {%- endblock content -%}
