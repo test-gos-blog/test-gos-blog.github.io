@@ -26,3 +26,4 @@ external_links_no_referrer = true
 
 [extra]
 canonical_base_url = "https://grapheneos.org"
+github_repo = "https://github.com/test-gos-blog/test-gos-blog.github.io"
