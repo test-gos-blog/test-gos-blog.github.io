@@ -1,7 +1,6 @@
 +++
 title = "Best User Profile Setup on GrapheneOS"
 description = "How to pick a profile setup that works best for you."
-date = 2025-01-01
 +++
 
 _This was taken from [Seprand](https://seprand.github.io/articles/best-user-profile-setup/) for testing_.
