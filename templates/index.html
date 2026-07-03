@@ -9,19 +9,26 @@
             {%- set subsection = get_section( path=p ) -%}
                 {%- if subsection.pages | length > 0 -%}
                     <h2><a href="{{ subsection.permalink }}">{{ subsection.title }}</a></h2>
-                    <ul>
+                    <div class="article-list">
                         {%- for page in subsection.pages -%}
-                            <li><a href="{{ page.permalink }}">{{ page.title }}</a> <var>
-                                {%- if page.updated is defined and page.updated -%}
-                                (updated {{ page.updated | date }})
-                                {%- else -%}
-                                ({{ page.date | date}})
-                                {%- endif -%}
-                            </var></li>
-                            {# Seems indexes start at 1 #}
-                            {%- if loop.index == 5 %}{% break %}{% endif -%}
+                            <div class="article-card">
+                                <span class="article-title">
+                                    <a href="{{ page.permalink }}">
+                                        {{ page.title }}
+                                    </a>
+                                </span>
+                                <div class="article-date">
+                                    {%- if page.updated -%}
+                                    updated {{ page.updated | date }}
+                                    {%- else -%}
+                                    {{ page.date | date}}
+                                    {%- endif -%}
+                                </div>
+                                <p class="article-description">{{ page.description }}</p>
+                            </div>
+                            {%- if loop.index == 3 %}{% break %}{% endif -%}
                         {%- endfor -%}
-                    </ul>
+                    </div>
                 {%- endif -%}
         {%- endfor -%}
     </div>
