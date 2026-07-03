@@ -15,7 +15,7 @@
     {{ section.content | safe }}
 
     <div class="article-list">
-        {%- for page in section.pages -%}
+        {%- for page in paginator.pages -%}
             <div class="article-card">
                 <span class="article-title">
                     <a href="{{ page.permalink }}">
@@ -33,5 +33,15 @@
             </div>
         {%- endfor -%}
     </div>
+    {% if paginator.previous or paginator.next %}
+    <nav class="pagination">
+        {% if paginator.previous %}
+            <a class="pagination-previous" href="{{ paginator.previous }}">‹ Previous</a>
+        {% endif %}
+        {% if paginator.next %}
+            <a class="pagination-next" href="{{ paginator.next }}">Next ›</a>
+        {% endif %}
+    </nav>
+    {% endif %}
 </main>
 {%- endblock content -%}
