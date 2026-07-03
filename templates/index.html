@@ -5,32 +5,15 @@
 <main>
     {{ section.content | safe }}
     <div>
-        {%- for p in root_section.subsections -%}
-            {%- set subsection = get_section( path=p ) -%}
-                {%- if subsection.pages | length > 0 -%}
-                    <h2><a href="{{ subsection.permalink }}">{{ subsection.title }}</a></h2>
-                    <div class="article-list">
-                        {%- for page in subsection.pages -%}
-                            <div class="article-card">
-                                <span class="article-title">
-                                    <a href="{{ page.permalink }}">
-                                        {{ page.title }}
-                                    </a>
-                                </span>
-                                <div class="article-date">
-                                    {%- if page.updated -%}
-                                    updated {{ page.updated | date }}
-                                    {%- else -%}
-                                    {{ page.date | date}}
-                                    {%- endif -%}
-                                </div>
-                                <p class="article-description">{{ page.description }}</p>
-                            </div>
-                            {%- if loop.index == 3 %}{% break %}{% endif -%}
-                        {%- endfor -%}
-                    </div>
-                {%- endif -%}
-        {%- endfor -%}
+        <h2>Article sections:</h2>
+        <ul>
+            {%- for p in root_section.subsections -%}
+                {%- set subsection = get_section( path=p ) -%}
+                    {%- if subsection.pages | length > 0 -%}
+                        <li><a href="{{ subsection.permalink }}">{{ subsection.title }}</a></li>
+                    {%- endif -%}
+            {%- endfor -%}
+        </ul>
     </div>
 </main>
 {%- endblock content -%}
