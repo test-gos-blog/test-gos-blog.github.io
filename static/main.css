@@ -189,6 +189,19 @@ footer a, footer a:visited {
     color: #616161; /* grey500 */
 }
 
+#social {
+    line-height: 2;
+    margin-top: 2em;
+    padding: 0;
+    list-style-type: none;
+    max-inline-size: 60ch;
+}
+
+#social li {
+    display: inline-block;
+    padding: 0 0.5em;
+}
+
 .article-list {
 display: flex;
 flex-direction: column;
@@ -378,19 +391,6 @@ details[open] summary {
 
     footer a, footer a:visited {
         color: #9f9f9f;
-    }
-    
-    #social {
-        line-height: 2;
-        margin-top: 2em;
-        padding: 0;
-        list-style-type: none;
-        max-inline-size: 60ch;
-    }
-
-    #social li {
-        display: inline-block;
-        padding: 0 0.5em;
     }
 
     footer img {
