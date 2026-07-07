@@ -17,19 +17,17 @@
     <div class="article-list">
         {%- for page in paginator.pages -%}
             <div class="article-card">
-                <span class="article-title">
-                    <a href="{{ page.permalink }}">
-                        {{ page.title }}
-                    </a>
-                </span>
-                <div class="article-date">
-                    {%- if page.updated -%}
-                    updated {{ page.updated | date }}
-                    {%- else -%}
-                    {{ page.date | date}}
-                    {%- endif -%}
-                </div>
-                <p class="article-description">{{ page.description }}</p>
+                <a href=" {{ page.permalink }}">
+                    <span class="article-title">{{ page.title }}</span>
+                    <span class="article-date">
+                        {%- if page.updated -%}
+                        updated {{ page.updated | date }}
+                        {%- else -%}
+                        {{ page.date | date}}
+                        {%- endif -%}
+                    </span>
+                    <span class="article-description">{{ page.description }}</span>
+                </a>
             </div>
         {%- endfor -%}
     </div>
