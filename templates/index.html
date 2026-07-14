@@ -1,19 +1,38 @@
 {%- extends "base.html" -%}
 
 {%- block content -%}
-{%- set root_section = get_section( path="_index.md" ) -%}
 <main>
+    <h1>{{ section.title | safe }}</h1>
     {{ section.content | safe }}
-    <div>
-        <h2>Article sections:</h2>
-        <ul>
-            {%- for p in root_section.subsections -%}
-                {%- set subsection = get_section( path=p ) -%}
-                    {%- if subsection.pages | length > 0 -%}
-                        <li><a href="{{ subsection.permalink }}">{{ subsection.title }}</a></li>
-                    {%- endif -%}
-            {%- endfor -%}
-        </ul>
+
+    <h2>Articles:</h2>
+
+    <div class="article-list">
+        {%- for page in paginator.pages -%}
+            <div class="article-card">
+                <a href=" {{ page.permalink }}">
+                    <span class="article-title">{{ page.title }}</span>
+                    <span class="article-date">
+                        {%- if page.updated -%}
+                        updated {{ page.updated | date }}
+                        {%- else -%}
+                        {{ page.date | date}}
+                        {%- endif -%}
+                    </span>
+                    <span class="article-description">{{ page.description }}</span>
+                </a>
+            </div>
+        {%- endfor -%}
     </div>
+    {% if paginator.previous or paginator.next %}
+    <nav class="pagination">
+        {% if paginator.previous %}
+            <a class="pagination-previous" href="{{ paginator.previous }}">‹ Previous</a>
+        {% endif %}
+        {% if paginator.next %}
+            <a class="pagination-next" href="{{ paginator.next }}">Next ›</a>
+        {% endif %}
+    </nav>
+    {% endif %}
 </main>
 {%- endblock content -%}

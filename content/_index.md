@@ -1,4 +1,7 @@
 +++
+sort_by = "update_date"
+generate_feeds = true
+paginate_by = 10
 +++
 
 # GrapheneOS Test Blog
