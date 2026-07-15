@@ -10,7 +10,7 @@
 
 {%- block content -%}
 <main>
-    <a href="/">‹ all posts</a>
+    <a href="{{ get_url( path="@/_index.md" ) }}">‹ all posts</a>
     <h1 id="page-title">{{ page.title }}</h1>
     {%- if page.updated is defined and page.updated -%}
     Updated: <var>{{ page.updated | date }}</var>
