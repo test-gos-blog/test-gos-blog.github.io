@@ -1,9 +1,9 @@
 # The URL the site will be built for
 base_url = "https://test-gos-blog.github.io"
 title = "GrapheneOS Test Blog"
-description = "A test GOS blog."
+description = "A test GrapheneOS blog."
 
-# Default author for posts (for atom feeds)
+# Default author, but can be overridden for individual posts.
 author = "GrapheneOS Team"
 
 exclude_paginated_pages_in_sitemap = "all"
@@ -27,5 +27,5 @@ external_links_no_referrer = true
 external_links_external = true
 
 [extra]
-canonical_base_url = "https://grapheneos.org"
+canonical_base_url = "https://test-gos-blog.github.io"
 github_repo = "https://github.com/test-gos-blog/test-gos-blog.github.io"
