@@ -10,7 +10,7 @@
     <div class="article-list">
         {%- for page in paginator.pages -%}
             <div class="article-card">
-                <a href=" {{ page.permalink }}">
+                <a href=" {{ page.permalink | safe }}">
                     <span class="article-title">{{ page.title }}</span>
                     <span class="article-date">
                         {%- if page.updated -%}
@@ -27,10 +27,10 @@
     {% if paginator.previous or paginator.next %}
     <nav class="pagination">
         {% if paginator.previous %}
-            <a class="pagination-previous" href="{{ paginator.previous }}">‹ Previous</a>
+            <a class="pagination-previous" href="{{ paginator.previous | safe }}">‹ Previous</a>
         {% endif %}
         {% if paginator.next %}
-            <a class="pagination-next" href="{{ paginator.next }}">Next ›</a>
+            <a class="pagination-next" href="{{ paginator.next | safe }}">Next ›</a>
         {% endif %}
     </nav>
     {% endif %}
