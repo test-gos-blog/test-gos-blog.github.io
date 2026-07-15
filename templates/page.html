@@ -9,7 +9,7 @@
 {% block og_desc %}{{ page.description }}{% endblock og_desc %}
 
 {%- block content -%}
-<main>
+<main class="blog-post">
     <a href="{{ get_url( path="@/_index.md" ) }}">‹ all posts</a>
     <h1 id="page-title">{{ page.title }}</h1>
     {% if page.updated is defined and page.updated -%}
