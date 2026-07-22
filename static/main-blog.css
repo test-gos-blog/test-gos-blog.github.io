@@ -56,6 +56,20 @@ hr {
     margin: 0 auto;
 }
 
+.footnote-definition {
+  width: 100%;
+}
+
+.footnote-definition .footnote-definition-label {
+  float: left;
+  margin-right: 0.4em;
+}
+
+.footnote-definition p {
+  margin: 0 0 0.5em 0;
+  overflow: hidden;
+}
+
 .pagination {
     display: flex;
     justify-content: space-between;

@@ -147,6 +147,6 @@ Pictures are already tested in another file, [here](@/2025-02-01-pictures.md).
 
 ---
 
-[^1]: Made you look!
-[^2]: Made you look!
+[^1]: (long to test) Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look! Made you look!
+[^2]: (long fake word) madeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulookmadeyoulook
 [^3]: Made you look!
