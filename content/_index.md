@@ -4,9 +4,9 @@ generate_feeds = true
 paginate_by = 10
 +++
 
-# GrapheneOS Test Blog
+# GrapheneOS Blog
 
-GrapheneOS Test Blog is a pretend blog written by members of the GrapheneOS project and community members.
+GrapheneOS Blog is written by members of the GrapheneOS project and community members.
 
 This site is meant to provide our users a single place to get information related to the project. 
 
