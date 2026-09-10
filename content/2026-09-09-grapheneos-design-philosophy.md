@@ -1,0 +1,16 @@
++++
+title = "GrapheneOS's Design Philosophy"
+description = "How GrapheneOS balances our main priorities: privacy, security and Android app compatibility"
++++
+
+The goal of GrapheneOS is to provide a highly private and secure device with great usability, functionality and app compatibility. Privacy and security are our core values and everything we build is based around these principles.
+
+There are many ideas out there that aim to tackle all kinds of privacy intrusions. We disagree with bundling privacy apps for the sake of it. For one, we may not be fully convinced of the underlying premise and the approach taken to solve a problem. Our users also have vastly different threat models, i.e. what they want to protect themselves from. A solution that’s suitable for one can be overkill for the next person and vice versa. Although it's certainly helpful to guide people to privacy respecting apps and services, the user ultimately needs to decide for themselves what their goals are and what they are comfortable with.
+
+Sometimes less is more, this especially applies to attack surface. Every one of our features that makes it into a production release of GrapheneOS has undergone scrutiny from the quality of the implementation but also from a design perspective. None of our features rely on adversaries being unfamiliar with GrapheneOS, it's always assumed they have encyclopedic knowledge of it. What problems would an upcoming feature solve? Does it come with any drawbacks? What could an adversary do to defeat it? And finally, is it worthwhile relative to the maintenance burden it incurs in the future? These are all questions that need to be answered individually but also weighed up against one another.
+
+The maintenance burden encompasses the time and effort it takes to port a feature to the latest AOSP release and make it fit for other upcoming features it may be intertwined with. To keep this burden as small as possible we avoid unnecessary deviations from AOSP, which is a large reason why for example the user interface is near identical.
+
+It is sometimes said that GrapheneOS puts security above everything else. Security is a topic we pay great attention to, because we firmly believe that privacy depends on security. A device that is vulnerable to widely known, public exploits can't accommodate a private experience. Security issues can undermine privacy features and make user data exfiltration possible or significantly easier. A telling example of this is the VPN leaks that have plagued Android for some time now. We have been looking into the VPN infrastructure and have fixed many bugs pertaining to it and continue to squash more as they show up. It’s an ongoing effort.
+
+The act of insinuating someone must have something to hide if they seek out ways to improve their privacy is a common trope, and one that's spilling over to the wish for security as well. You can be labeled a criminal or a person with illicit intentions for wanting to improve your security despite rampant cases of scams, malware and human rights violations. It's a highly flawed take and should be protested against - everyone needs privacy, everyone needs security. Your opinion matters, make your voice heard and help normalize privacy & security.
