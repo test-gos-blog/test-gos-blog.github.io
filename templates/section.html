@@ -1,0 +1,50 @@
+{# We are not using sections for now, but leaving this here in case we do in the future. #}
+
+{%- extends "base.html" -%}
+
+{% block title %}{{ section.title }} - {{ super() }}{% endblock title %}
+
+{% block description %}{{ section.description }}{% endblock description %}
+
+{% block og_title %}{{ section.title }}{% endblock og_title %}
+
+{% block og_desc %}{{ section.description }}{% endblock og_desc %}
+
+{%- block content -%}
+<main>
+    <h1>{{ section.title | safe }}</h1>
+    {{ section.content | safe }}
+
+    <div class="article-list">
+        {%- for page in paginator.pages -%}
+            <div class="article-card">
+                <a href=" {{ page.permalink }}">
+                    <span class="article-title">{{ page.title }}</span>
+                    <span class="article-date">
+                        {%- if page.updated -%}
+                        updated {{ page.updated | date }}
+                        {%- else -%}
+                        {{ page.date | date}}
+                        {%- endif -%}
+                    </span>
+                    <span class="article-description">{{ page.description }}</span>
+                </a>
+            </div>
+        {%- endfor -%}
+    </div>
+    {% if paginator.previous or paginator.next %}
+    <nav class="pagination">
+        {% if paginator.previous %}
+        <div class="pagination-previous">
+            <a href="{{ paginator.previous }}">‹ Previous</a>
+        </div>
+        {% endif %}
+        {% if paginator.next %}
+        <div class="pagination-next">
+            <a href="{{ paginator.next }}">Next ›</a>
+        </div>
+        {% endif %}
+    </nav>
+    {% endif %}
+</main>
+{%- endblock content -%}

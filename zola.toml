@@ -1,0 +1,20 @@
+base_url = "https://test-gos-blog.github.io"
+title = "GrapheneOS Test Blog"
+description = "A test GrapheneOS blog."
+
+# Default author, but can be overridden for individual posts.
+author = "GrapheneOS Team"
+
+exclude_paginated_pages_in_sitemap = "all"
+
+compile_sass = false
+
+[markdown]
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
+external_links_external = true
+
+[extra]
+canonical_base_url = "https://test-gos-blog.github.io"
+github_repo = "https://github.com/test-gos-blog/test-gos-blog.github.io"

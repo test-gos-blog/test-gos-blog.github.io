@@ -1,0 +1,31 @@
+{%- extends "base.html" -%}
+
+{%- block content -%}
+<main>
+    <h1>{{ section.title | safe }}</h1>
+    {{ section.content | safe }}
+
+    <ul class="article-list">
+        {%- for page in paginator.pages -%}
+            <li class="article-item">
+                <a class="article-title" href="{{ page.permalink }}">{{ page.title }}</a>
+                <time class="article-date">{{ page.date | date }}</time>
+            </li>
+        {%- endfor -%}
+    </ul>
+    {% if paginator.previous or paginator.next %}
+    <nav class="pagination">
+        {% if paginator.previous %}
+        <div class="pagination-previous">
+            <a href="{{ paginator.previous }}">‹ Previous</a>
+        </div>
+        {% endif %}
+        {% if paginator.next %}
+        <div class="pagination-next">
+            <a href="{{ paginator.next }}">Next ›</a>
+        </div>
+        {% endif %}
+    </nav>
+    {% endif %}
+</main>
+{%- endblock content -%}

@@ -1,0 +1,83 @@
+blockquote {
+	border-left: 1px solid #616161;
+	margin: 1em 3px;
+	padding: 0.5em 10px;
+}
+
+blockquote p {
+	display: inline;
+}
+
+hr {
+    margin: 15px 0px;
+    border: none;
+    border-top: 1px solid #616161;
+}
+
+.article-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.article-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 0.5px solid #616161;
+}
+
+.article-title {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.article-date {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.blog-post img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.footnote-definition {
+    width: 100%;
+}
+
+.footnote-definition .footnote-definition-label {
+    float: left;
+    margin-right: 0.4em;
+}
+
+.footnote-definition p {
+    margin: 0 0 0.5em 0;
+    overflow: hidden;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.pagination div {
+    padding: 8px 16px;
+}
+
+.pagination-next {
+    margin-left: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+    .article-card a, .article-card a:visited {
+        color: rgb(255 255 255 / 87%);
+    }
+}
