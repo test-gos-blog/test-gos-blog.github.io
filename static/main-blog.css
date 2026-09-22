@@ -1,5 +1,5 @@
 blockquote {
-	border-left: 1px solid #616161;
+	border-left: 1px solid #74777f;
 	margin: 1em 3px;
 	padding: 0.5em 10px;
 }
@@ -9,9 +9,9 @@ blockquote p {
 }
 
 hr {
-    margin: 15px 0px;
+    margin: 15px 0;
     border: none;
-    border-top: 1px solid #616161;
+    border-top: 1px solid #74777f;
 }
 
 .article-list {
@@ -26,7 +26,7 @@ hr {
     align-items: center;
     gap: 1rem;
     padding: 0.5rem 0;
-    border-bottom: 0.5px solid #616161;
+    border-bottom: 0.5px solid #74777f;
 }
 
 .article-title {
@@ -58,14 +58,14 @@ hr {
 }
 
 .footnote-definition p {
-    margin: 0 0 0.5em 0;
+    margin: 0 0 0.5em;
     overflow: hidden;
 }
 
 .pagination {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0px;
+    padding: 10px 0;
 }
 
 .pagination div {
